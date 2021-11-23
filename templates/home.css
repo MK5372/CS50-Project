@@ -1,8 +1,7 @@
-
 .banner {
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(25,25,25,.75), rgba(25,25,25,.75)), url(homepage.jpg);
+    background-image: linear-gradient(rgba(25,25,25,.75), rgba(25,25,25,.75)), url(homebackground.jpeg);
     background-size: cover;
     background-position: center;
 }
@@ -27,7 +26,7 @@
     line-height: 25px;
 }
 
-button {
+.newbutton {
     width: 200px;
     padding: 15px 0;
     text-align: center;
@@ -42,7 +41,7 @@ button {
     overflow: hidden;
 }
 
-span {
+newspan {
     background: #009688;
     height: 100%;
     width: 0;
@@ -54,10 +53,6 @@ span {
     transition: 0.5s;
 }
 
-button:hover span{
+.newbutton:hover newspan{
     width: 100%;
-}
-
-button:hover {
-    border: none;
 }
