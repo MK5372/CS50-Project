@@ -1,34 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<form action="/buy" method="post">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <link href="/static/navbar.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+html {
+  box-sizing: border-box;
+  background-color: rgba(24,24,24,255);
+}
 
-  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500;700&family=Lobster&display=swap"
-    rel="stylesheet" />
-  <title>Crimson Marketplace</title>
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+.card {
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: black;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+</style>
+
 </head>
-
 <body>
-  <header>
-    <div class="container">
-      <h1 class="logo"></h1>
-
-      <nav>
-        <ul>
-          <li><a href="/buy">Buy</a></li>
-          <li><a href="/sell">Sell</a></li>
-          <li><a href="/profile">Profile</a></li>
-          <li><a href="/contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
   
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="/static/mohammed_maarouf.jpeg" alt="Jane" style="width:100%">
+      <div class="container">
+        <h2>Mohammed Maarouf</h2>
+        <p class="title">CEO & Founder</p>
+        <p>Mohammed Maarouf is a freshman studying Computer Science and Economics. He enjoys playing a variety of sports such as soccer, boxing, or flag football. As a Californian, Mohammed is a big thrill-seeker who especially loves amusement parks and all types of beaches.</p>
+        <p><button class="button">mmaarouf@college.harvard.edu</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="/static/Mihir_Kumashi.jpg" alt="Mike" style="width:100%">
+      <div class="container">
+        <h2>Mihir Kumashi</h2>
+        <p class="title">CEO & Founder</p>
+        <p>Mihir Kumashi is a freshman studying computer science and mathematics. He's an avid fencer, often traveling around the world to compete. On the side, he loves to watch basketball and football. As a big nature enthusiast, he enjoys hiking, fishing, traveling around the world to see wonders, and sampling local cuisines in exotic places.  </p>
+        <p><button class="button">mkumashi@college.harvard.edu</button></p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="/static/Justin_Liu.jpg" alt="John" style="width:100%">
+      <div class="container">
+        <h2>Justin Liu</h2>
+        <p class="title">CEO & Founder</p>
+        <p>Justin Liu is a current first year who is considering studying Applied Math with Economics or Computer Science. He is on Harvard's Varsity Fencing Team. In his free time, he enjoys playing music (piano, clarinet, and bassoon), riding his scooter, and traveling.</p>
+        <p><button class="button">justinliu@college.harvard.edu</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+
 </body>
-</form>
 </html>

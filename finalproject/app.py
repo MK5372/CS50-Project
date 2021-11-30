@@ -14,8 +14,13 @@ def index():
 @app.route("/buy", methods=["GET", "POST"])
 def buy():
     if request.method == "GET":
-        ##db.execute("SELECT name FROM listings WHERE )
-        return(render_template("buy.html"))
+        totalitems = db.execute("SELECT id FROM listings")
+        dictlen = len(totalitems)
+
+        for x in range(dictlen):
+           item = db.execute("SELECT item FROM listings WHERE id = ?", x)
+
+        return(render_template("buy.html",item=item))
     else:
         return(render_template("buy.html"))
 

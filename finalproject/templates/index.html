@@ -18,21 +18,21 @@
 </head>
 
 <body>
-  <header>
-    <div class="container">
-      <h1 class="logo"></h1>
-      <nav>
-        <ul>
-          <li><a href="/buy">Buy</a></li>
-          <li><a href="/sell">Sell</a></li>
-          <li><a href="/profile">Profile</a></li>
-          <li><a href="/contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
   <main>
+    <header>
+      <div class="container">
+        <h1 class="logo"></h1>
+        <nav>
+          <ul>
+            <li><a href="/buy">Buy</a></li>
+            <li><a href="/sell">Sell</a></li>
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <div class="banner">
       <div class="content">
         <h1 style="font-family: 'Courier New', monospace">Welcome to Crimson Marketplace!</h1>
@@ -42,11 +42,11 @@
           Your browser does not support the video tag.
         </video>
         <center>
-          <div id="my-signin2"></div>
+          <div id="my-signin2" data-onsuccess="onSignIn"></div> <!-- to call the function on the page when signed in-->
         </center>
+        <div id="content"> </div>
       </div>
     </div>
-    <p id="output"></p>
   </main>
   <div class="intro">
     <div class="intro-text">
@@ -86,13 +86,12 @@
 
   <script>
   function onSignIn(googleUser) {
-  var profile = googleUser.getBasicProfile();
-  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-  console.log('Name: ' + profile.getName());
-  console.log('Image URL: ' + profile.getImageUrl());
-  email = console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
 
-  document.getElementById('output').innerHTML = email;
+  var profile = googleUser.getBasicProfile();
+
+  name = profile.getName()
+
+
 }
   </script>
 
