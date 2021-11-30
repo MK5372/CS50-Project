@@ -1,5 +1,14 @@
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(25,25,25,.75), rgba(25,25,25,.75)), url(homebackground.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
 .content {
     width: 100%;
+    position: absolute;
     top: 50%;
     transform: translateY(-50%);
     text-align: center;
@@ -47,5 +56,9 @@ newspan {
 .newbutton:hover newspan{
     width: 100%;
 }
-
-  
+.center {
+    margin: auto;
+    width: 60%;
+    border: 5px solid #FFFF00;
+    padding: 10px;
+}

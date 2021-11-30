@@ -1,8 +1,11 @@
 from flask import Flask, redirect, url_for, render_template, request, flash
+from cs50 import SQL
 
 
 # Configure application
 app = Flask(__name__)
+
+db = SQL("sqlite:///finance.db")
 
 @app.route("/")
 def index():
@@ -11,6 +14,7 @@ def index():
 @app.route("/buy", methods=["GET", "POST"])
 def buy():
     if request.method == "GET":
+        ##db.execute("SELECT name FROM listings WHERE )
         return(render_template("buy.html"))
     else:
         return(render_template("buy.html"))
@@ -20,6 +24,13 @@ def sell():
      if request.method == "GET":
         return(render_template("sell.html"))
      else:
+        name = request.form.get("name")
+        item = request.form.get("item")
+        location = request.form.get("location")
+        price = request.form.get("price")
+        description = request.form.get("description")
+        db.execute("INSERT INTO listings(name, item, location, price, description) VALUES (?,?,?,?,?)", name, item, location, price, description)
+
         return(render_template("sell.html"))
 
 @app.route("/profile", methods=["GET", "POST"])
@@ -41,4 +52,5 @@ def signup():
         return(render_template("signup.html"))
    else:
         return(render_template("signup.html"))
+
 

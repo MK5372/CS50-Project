@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+
+{% block main %}
+
 <html lang="en">
 
 <form action="/buy" method="post">
@@ -28,7 +31,14 @@
       </nav>
     </div>
   </header>
+  <p> {{ name }} </p>
+  <p> {{ item }} </p>
+  <p> {{ location }} </p>
+  <p> {{ price }} </p>
+  <p> {{ description }} </p>
+  <img id="output" width="200" />	
   
 </body>
 </form>
+{% endblock %}
 </html>

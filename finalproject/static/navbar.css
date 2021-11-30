@@ -1,7 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
 	margin: 0;
-	background: #222;
+	background: #181818;
+  opacity: 1;
 	font-family: 'Work Sans', sans-serif;
 	font-weight: 800;
 }
@@ -44,6 +50,12 @@ nav li {
   position: relative;
 }
 
+nav homeli {
+  display: inline-block;
+  margin-left: 0
+  
+}
+
 nav a {
   color: #444;
   text-decoration: none;
@@ -60,6 +72,7 @@ nav a::before {
   display: block;
   height: 5px;
   background-color: #444;
+
   position: absolute;
   top: 0;
   width: 0%;
