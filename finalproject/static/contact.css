@@ -1,4 +1,4 @@
-html {
+body {
   box-sizing: border-box;
   background-color: rgba(24,24,24,255);
 }
@@ -37,7 +37,7 @@ html {
 }
 
 .title {
-  color: grey;
+  color: black;
 }
 
 .button {
@@ -54,3 +54,4 @@ html {
 
 .button:hover {
   background-color: #555;
+}
