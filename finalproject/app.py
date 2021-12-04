@@ -1,11 +1,17 @@
 from flask import Flask, redirect, url_for, render_template, request, flash
 from cs50 import SQL
+import os
+from werkzeug.utils import secure_filename
 
 
 # Configure application
 app = Flask(__name__)
 
 db = SQL("sqlite:///finance.db")
+
+upload_folder = "static/uploads/"
+
+app.config['UPLOAD_FOLDER'] = upload_folder
 
 @app.route("/")
 def index():
@@ -14,13 +20,13 @@ def index():
 @app.route("/buy", methods=["GET", "POST"])
 def buy():
     if request.method == "GET":
-        totalitems = db.execute("SELECT id FROM listings")
+        totalitems = db.execute("SELECT id,location,item,price,description,name FROM listings")
         dictlen = len(totalitems)
 
         for x in range(dictlen):
-           item = db.execute("SELECT item FROM listings WHERE id = ?", x)
+           item = db.execute("SELECT item FROM listings WHERE id = ?", x+1)
 
-        return(render_template("buy.html",item=item))
+        return(render_template("buy.html", items = totalitems))
     else:
         return(render_template("buy.html"))
 
@@ -34,7 +40,12 @@ def sell():
         location = request.form.get("location")
         price = request.form.get("price")
         description = request.form.get("description")
-        db.execute("INSERT INTO listings(name, item, location, price, description) VALUES (?,?,?,?,?)", name, item, location, price, description)
+        imgsrc = request.form.get("itemimg")
+
+        db.execute("INSERT INTO listings(name, item, location, price, description, imgsrc) VALUES (?,?,?,?,?,?)", name, item, location, price, description, imgsrc)
+
+        f = request.files['itemimg']
+        f.save(os.path.join(app.config['UPLOAD_FOLDER'], secure_filename(f.filename)))
 
         return(render_template("sell.html"))
 

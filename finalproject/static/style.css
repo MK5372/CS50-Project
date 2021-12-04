@@ -9,7 +9,6 @@ main {
 
 .landing {
   min-height: 100vh;
-  background: url("homebackground.png");
   background-size: cover;
   padding: 0rem 5rem;
 }

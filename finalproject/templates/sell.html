@@ -1,5 +1,5 @@
 <html>
-  <form action="/sell" method="post">
+  <form action="/sell" method="post" enctype = 'multipart/form-data'>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="/static/navbar.css" rel="stylesheet">
@@ -33,10 +33,10 @@
 
       <label for="location">Item Location:</label>
       <select id="location" name="location">
-        <option value="square">Harvard Square</option>
-        <option value="quad">Quad </option>
-        <option value="yard">The Yard</option>
-        <option value="offcampus">Off Campus</option>
+        <option value="Harvard Square">Harvard Square</option>
+        <option value="The Quad">The Quad </option>
+        <option value="The Yard">The Yard</option>
+        <option value="Off Campus">Off Campus</option>
       </select>
 
       <label for="price">Price:</label>
@@ -44,10 +44,10 @@
 
 
       <form action="/action_page.php">
-        <label for="myfile">Upload Pictures:</label>
-        <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" multiple></p>
+        <label for="myfile">Upload Picture:</label>
+        <p><input type="file"  accept="image/*" name="itemimg" id="itemimg"  onchange="loadFile(event)"></p>
         <img id="output" name="output" width="200" />	
-
+    
         <br><br><br>
 
       <label for="subject">Item Description And Condition</label>

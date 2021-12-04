@@ -4,6 +4,13 @@ import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
   padding: 0;
   box-sizing: border-box;
 }
+body {
+	margin: 0;
+	background: #181818;
+  opacity: 1;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 800;
+}
 
 .container {
 	width: 80%;
@@ -41,12 +48,6 @@ nav li {
   padding-top: 23px;
 
   position: relative;
-}
-
-nav homeli {
-  display: inline-block;
-  margin-left: 0
-  
 }
 
 nav a {
