@@ -1,0 +1,72 @@
+<html>
+  <form action="/sell" method="post" enctype = 'multipart/form-data'>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="/static/navbar.css" rel="stylesheet">
+  <link href="/static/sell.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <h1 class="logo"></h1>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/buy">Buy</a></li>
+          <li><a href="/sell">Sell</a></li>
+          <li><a href="/profile">Profile</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/signup">Register</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="newcontainer">
+    <form action="/action_page.php">
+      <label for="fname">Your Name:</label>
+      <input type="text" id="name" name="name" placeholder="Your name..">
+
+      <label for="lname">Item Name:</label>
+      <input type="text" id="item" name="item" placeholder="Item Name..">
+
+      <label for="location">Item Location:</label>
+      <select id="location" name="location">
+        <option value="Harvard Square">Harvard Square</option>
+        <option value="The Quad">The Quad </option>
+        <option value="The Yard">The Yard</option>
+        <option value="Off Campus">Off Campus</option>
+      </select>
+
+      <label for="price">Price:</label>
+      <input type="text" id="price" name="price" placeholder="Price..">
+
+
+      <form action="/action_page.php">
+        <label for="myfile">Upload Picture:</label>
+        <p><input type="file"  accept="image/*" name="itemimg" id="itemimg"  onchange="loadFile(event)"></p>
+        <img id="output" name="output" width="200" />	
+    
+        <br><br><br>
+
+      <label for="subject">Item Description And Condition</label>
+      <textarea id="description" name="description" placeholder="Description.." style="height:200px"></textarea>
+
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+</body>
+
+<script>
+  var loadFile = function(event) {
+    var image = document.getElementById('output');
+    image.src = URL.createObjectURL(event.target.files[0]);
+  };
+</script>
+
+
+</form>
+</html>
