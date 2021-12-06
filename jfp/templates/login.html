@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<form action="/login" method="post">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <link href="/static/navbar.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500;700&family=Lobster&display=swap"
+    rel="stylesheet" />
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id"
+    content="348920952981-9l0h9tpo57tv8nkpmdshorcj3lcv4976.apps.googleusercontent.com">
+  <title>Crimson Marketplace</title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1 class="logo"></h1>
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/buy" type = "hidden">Buy</a></li>
+          <li><a href="/sell" type = "hidden">Sell</a></li>
+          <li><a href="/profile" type = "hidden">Profile</a></li>
+          <li><a href="/contact" type = "hidden">Contact</a></li>
+          <li><a href="/signup">Register</a></li>
+          <li><a href="/login">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <form action="/login" method="post">
+    <div class="mb-3">
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text">
+    </div>
+    <div class="mb-3">
+        <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
+    </div>
+    <button class="btn btn-primary" type="submit">Log In</button>
+  </form>
+
+
+</body>
+</form>
+</html>
