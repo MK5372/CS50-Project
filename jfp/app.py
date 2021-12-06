@@ -1,3 +1,5 @@
+#final project link: https://vault.cs50.io/552eaac7-821c-4a50-b9ec-60220974cd61
+
 import os
 
 from cs50 import SQL
@@ -84,6 +86,7 @@ def contact():
      else:
         return(render_template("contact.html"))
 
+'''
 @app.route("/login", methods=["GET", "POST"])
 def login():
     """Log user in"""
@@ -119,10 +122,9 @@ def login():
     # User reached route via GET (as by clicking a link or via redirect)
     else:
         return render_template("login.html")
-
+'''
 
 @app.route("/logout")
-@login_required
 def logout():
     """Log user out"""
 
@@ -130,9 +132,9 @@ def logout():
     session.clear()
 
     # Redirect user to login form
-    return render_template("index.html")
+    return redirect("https://vault.cs50.io/552eaac7-821c-4a50-b9ec-60220974cd61")
 
-
+'''
 @app.route("/signup", methods=["GET", "POST"])
 def signup():
     """Register user"""
@@ -176,7 +178,7 @@ def signup():
     # Redirect user to home page
     # db.execute("ALTER )
     return render_template("index.html")
-
+'''
 
 def errorhandler(e):
     """Handle error"""
