@@ -1,0 +1,44 @@
+
+input[type=text]{
+ width:30%;
+ border:2px solid #aaa;
+ border-radius:4px;
+ margin:8px 0;
+ outline:none;
+ padding:8px;
+ box-sizing:border-box;
+ transition:.3s;
+ text-align: "center";
+ 
+}
+ 
+input[type=text]:focus{
+ border-color:dodgerBlue;
+ box-shadow:0 0 8px 0 dodgerBlue;
+}
+
+input[type=password]{
+    width:30%;
+    border:2px solid #aaa;
+    border-radius:4px;
+    margin:8px 0;
+    outline:none;
+    padding:8px;
+    box-sizing:border-box;
+    transition:.3s;
+    text-align: "center";
+}
+    
+input[type=password]:focus{
+     border-color:dodgerBlue;
+    box-shadow:0 0 8px 0 dodgerBlue;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+
+    

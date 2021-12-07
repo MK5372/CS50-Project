@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="/static/style.css" rel="stylesheet">
+  <link href="/static/home.css" rel="stylesheet">
+  <link href="/static/navbar.css" rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500;700&family=Lobster&display=swap"
+    rel="stylesheet" />
+  <meta name="google-signin-client_id"
+    content="348920952981-9l0h9tpo57tv8nkpmdshorcj3lcv4976.apps.googleusercontent.com">
+
+  <title>Crimson Marketplace</title>
+</head>
+
+<body>
+
+  <main style="background-color: rgba(24,24,25,255);">
+    <header>
+      <div class="container">
+        <h1 class="logo"></h1>
+        <nav>
+          <ul>
+            <li><a href="/signup">Register</a></li>
+            <li><a href="/login">Log In</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="banner">
+      <div class="content">
+        <h1 style="font-family: 'Courier New', monospace">Welcome to Crimson Marketplace!</h1>
+        <video height=400 width=500 autoplay loop muted style="pointer-events: none;">
+          <source src="/static/logo.mp4" type="video/mp4">
+          <source src="logo.ogg" type="video/ogg">
+          Your browser does not support the video tag.
+        </video>
+        <center>
+          <div id="my-signin2" data-onsuccess="onSignIn"></div> <!-- to call the function on the page when signed in-->
+        </center>
+        <div id="content"> </div>
+      </div>
+    </div>
+  </main>
+  <div class="intro">
+    <div class="intro-text">
+      <h1 class="hide">
+        <span class="text">Crimson Market:</span>
+      </h1>
+      <h1 class="hide">
+        <span class="text" style="color:white" ;>A Simpler Alternative</span>
+      </h1>
+    </div>
+  </div>
+  <div class="slider"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
+    integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
+    crossorigin="anonymous"></script>
+  <script src="/static/app.js"></script>
+
+</body>
+
+</html>
